@@ -1441,10 +1441,18 @@ class qa_html_theme extends qa_html_theme_base
             $this->output('<div class="about-me widget">', '<h3 class="widget-title">' . qa_lang_html('cleanstrap/about_me') . '</h3>', $about, '</div>');
         $this->cs_user_activity_count($handle);
 		
-		$this->output('<div class="about-me widget">', '<h3 class="widget-title">' . qa_lang_html('cleanstrap/user_profile') . '</h3>');
-		qa_html_theme_base::form($this->content['form_profile']);
+        $this->output('<div class="about-me widget">', '<h3 class="widget-title">' . qa_lang_html('cleanstrap/user_profile') . '</h3>');
+        $this->output('<table class="user-profile">');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['name']['label'].'</td><td>' . $this->content['form_profile']['fields']['name']['value'] . '</td></tr>');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['location']['label'].'</td><td>' . $this->content['form_profile']['fields']['location']['value'] . '</td></tr>');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['website']['label'].'</td><td>' . $this->content['form_profile']['fields']['website']['value'] . '</td></tr>');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['duration']['label'].'</td><td>' . $this->content['form_profile']['fields']['duration']['value'] . '</td></tr>');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['permits']['label'].'</td><td>' . $this->content['form_profile']['fields']['permits']['value'] . '</td></tr>');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['level']['label'].'</td><td>' . $this->content['form_profile']['fields']['level']['value'] . '</td></tr>');
+        $this->output('<tr><td>'.$this->content['form_profile']['fields']['email']['label'].'</td><td>' . $this->content['form_profile']['fields']['email']['value'] . '</td></tr>');
+        $this->output('</table>');
+        //var_dump($this->content['form_profile']);
 		$this->output('</div>');
-		
         $this->cs_user_qa($handle);
         $this->output('</div>');
         $this->output('</div>');

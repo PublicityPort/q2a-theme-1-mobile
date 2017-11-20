@@ -12,6 +12,11 @@ a:hover {
     text-decoration: none;
 }
 
+.user-profile td{
+	width: 56%;
+	padding-bottom: 12px;
+}
+
 textarea, input[type="text"], input[type="password"], select {
     background-color: #FFFFFF;
     background-image: none;
@@ -736,6 +741,7 @@ body {
     padding: 0;
 }
 .home-pos-one .col-md-8{
+    width:100%;
 
 }
 .home-pos-one .row {

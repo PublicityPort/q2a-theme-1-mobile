@@ -78,12 +78,9 @@
 			else
 				$params=null;
 			$widget_opt = @$themeobject->current_widget['param']['options'];
-			
-			file_put_contents("out.log", print_r($themeobject, true), FILE_APPEND);
-
-			file_put_contents("out.log", print_r($widget_opt, true), FILE_APPEND);
 			$ask_intro_message = $widget_opt['cs_ask_intro_message'];
 			$ask_placeholder_message = $widget_opt['cs_ask_placeholder_message'];
+			
 			$themeobject->output('<div class="ra-ask-widget">');
 			$themeobject->output(
 				'<h1 class="intro-title"> ' . (

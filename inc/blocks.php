@@ -609,8 +609,6 @@ class qa_html_theme extends qa_html_theme_base
 		if ($this->cs_position_active('Header')) {
 			$this->output('<div class="header-position-c clearfix">');
 			
-			$this->output('<h1 class="intro-title"> ' . qa_lang_html('cleanstrap/got_questions') . '</h1>');
-			
 			if ($this->cs_position_active('Header Left')) {
 				$this->output('<div class="col-md-' . $class . '">');
 				$this->cs_position('Header Left');

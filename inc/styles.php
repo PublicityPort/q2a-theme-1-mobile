@@ -59,12 +59,13 @@ if (!defined('QA_VERSION')) {
 		
 	// Responsive mobile logo
 	$mobile_logo = qa_opt('cs_mobile_logo_url');
+	/*
 	if (!(empty($mobile_logo)))
 		$css.= '@media only screen and (max-width : 480px){
 					#site-header .site-logo a{background: url("' . $mobile_logo . '") no-repeat scroll 0 0 rgba(0, 0, 0, 0);}
 				}
 		';
-		
+	*/	
 	// Selection Highlight color
 	$color = qa_opt('cs_highlight_color');
 	if (!(empty($color)))

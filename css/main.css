@@ -115,6 +115,15 @@ body {
     width: 235px;
 }
 
+.site-logo-img{
+    float: left;
+    padding-right: 2px;
+}
+
+.site-title{
+    margin: 4px 0 0 0;
+    font-size: 17px;
+}
 .back-to-top-nav, .back-to-top-right {
     border-radius: 50%;
     color: #FFFFFF;
@@ -138,11 +147,12 @@ body {
     display: block;
     float: none;
     height: auto;
-    padding-top: 12px;
+    padding-top: 9px;
     padding-right: 0px;
     color: #e45840;
     font-family: Caflisch Script Pro, cursive;
     font-size: 16px; 
+    padding-left: 8px;
 }
 
 #site-header .navbar {

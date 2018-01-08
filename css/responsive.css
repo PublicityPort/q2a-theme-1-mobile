@@ -175,7 +175,12 @@
 	#site-header .site-logo {
 		width: auto;
 	}
-		
+	.site-title{
+		display:none;
+	}
+	.site-logo-img{
+		display: none;
+	}
 	#site-header .navbar-default ul.user-nav li a {
 		padding: 5px;
 	}

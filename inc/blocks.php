@@ -210,7 +210,7 @@ class qa_html_theme extends qa_html_theme_base
     {
         $logo = qa_opt('logo_url');
         $this->output('<div class="site-logo">', '<a class="navbar-brand" title="' . strip_tags($this->content['logo']) . '" href="' . qa_opt('site_url') . '">'.
-                    qa_opt('site_title')
+                    '<img class="site-logo-img" src="'.$logo.'"/><p class="site-title">' . qa_opt('site_title')."</p>"
 					.'</a>', '</div>');
     }
     function cat_drop_nav()

@@ -36,6 +36,13 @@ class qa_html_theme extends qa_html_theme_base
 			if((bool)qa_opt('cs_enable_category_nav'))
 				unset($this->content['navigation']['main']['categories']);
         }
+
+        /* This code shows answer form after all answers are listed */
+        if(isset($this->content['a_form'])) { 
+			$a_form = $this->content['a_form']; 
+			unset($this->content['a_form']); 
+			$this->content['a_form'] = $a_form; 
+		} 
         
     }
     function html()

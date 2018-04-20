@@ -295,7 +295,7 @@ class qa_html_theme extends qa_html_theme_base
 			<?php
         } else {
 ?>				
-				<a class="btn login-register icon-login"  href="#" data-toggle="modal" data-target="#login-modal" title="<?php
+				<a class="btn login-register icon-login"  href="<?php echo qa_opt('site_url') . 'login'; ?>" data-toggle="modal" title="<?php
             echo qa_lang_html('cleanstrap/login_register');
 ?>"><span class="qa-nav-main" style="float: none;"> Login</span></a>
 			<?php
@@ -370,37 +370,6 @@ class qa_html_theme extends qa_html_theme_base
 									<input type="submit" value="<?php
 				echo qa_lang_html('cleanstrap/login');
 	?>" id="qa-login" name="dologin" class="btn btn-primary btn-large btn-block" />
-								</form>
-								</div>
-								<div class="col-sm-6">
-								<form id="loginform" role="form" action="<?php
-				echo $this->content['navigation']['user']['register']['url'];
-	?>" method="post">
-									<div class="input-group">
-										<span class="input-group-addon"><i class="icon-user"></i></span>
-										<input type="text" class="form-control" id="qa-userid" name="handle" placeholder="<?php
-				echo trim(qa_lang_html('users/handle_label'), ':');
-	?>" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="icon-key"></i></span>
-										<input type="password" class="form-control" id="qa-password" name="password" placeholder="<?php
-				echo trim(qa_lang_html('users/password_label'), ':');
-	?>" />
-									</div>
-									<div class="input-group">
-										<span class="input-group-addon"><i class="icon-envelope"></i></span>
-										<input type="text" id="email" class="form-control" name="email" 	placeholder="<?php
-				echo trim(qa_lang_html('users/email_label'), ':');
-	?>">
-									</div>
-									
-									<input type="hidden" name="code" value="<?php
-				echo qa_html(qa_get_form_security_code('register'));
-	?>"/>
-									<input type="submit" value="<?php
-				echo $this->content['navigation']['user']['register']['label'];
-	?>" id="qa-register" name="doregister" class="btn btn-primary btn-block" />								
 								</form>
 								</div>
 							</div>							
